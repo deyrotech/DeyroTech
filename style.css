@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #fcfcfc;
+    color: #2d3436;
+    overflow-x: hidden;
+}
+
+/* Navbar Stability */
+.navbar {
+    background: transparent !important;
+    transition: all 0.3s ease;
+}
+
+.nav-side-item { width: 50px; } /* Kunci lebar agar logo tidak menggeser tombol */
+
+.nav-center-text {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    border: 2px solid #000;
+    padding: 5px 15px;
+}
+
+/* Sidebar Pop-up Glassmorphism */
+.offcanvas {
+    width: 220px !important;
+    border-radius: 20px 20px 20px 20px;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(20px);
+    box-shadow: 20px 0 50px rgba(0,0,0,0.1);
+    border: none;
+    margin: 6px -0;
+    height: calc(100% - 20px) !important;
+}
+
+.nav-link {
+    font-weight: 700;
+    margin: 5px 20px;
+    padding: 15px !important;
+    color: #444 !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 15px;
+}
+
+.nav-link:hover {
+    background: #000;
+    color: #fff !important;
+    transform: scale(1.05) translateX(10px);
+}
+
+/* Fix Foto & Blob */
+.abstract-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
+
+.blob-anim {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%;
+    z-index: -1;
+    fill: #d1e9ff;
+    animation: rotate-blob 20s infinite linear;
+}
+
+@keyframes rotate-blob {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.hero-img {
+    max-width: 350px;
+    width: 90%;
+    height: auto;
+}
+
+/* Responsivitas */
+@media (max-width: 991px) {
+    .display-2 { font-size: 2.5rem; }
+    .abstract-wrapper { max-width: 280px; }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+/* About Page Specific Styles */
+.profile-img {
+    border: 10px solid #fff;
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 180px;
+    text-align: left;
+}
+
+.info-card {
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-box {
+    height: 100%;
+    transition: background 0.3s ease;
+}
+
+.timeline-box:hover {
+    background: #fff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.active {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+/* Navbar Base Style */
+.navbar {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+/* Navbar Saat Di-scroll (Agar tidak menabrak konten) */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.8) !important; /* Transparan Glassmorphism */
+    backdrop-filter: blur(15px); /* Efek blur agar teks di belakang tidak 'menabrak' visual navbar */
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Mengunci lebar box samping agar tombol menu tidak bergeser */
+.nav-side-item {
+    width: 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Style Teks Solid di Tengah */
+.nav-center-text {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    border: none;
+    padding: 4px 15px;
+    background: none; /* Memberikan isi agar teks konten di belakang tidak terlihat menembus box ini */
+}
+
+/* Memastikan Main Content memiliki ruang agar tidak tertutup navbar Fixed */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Service Card Base */
+.service-card {
+    background: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08) !important;
+    border-color: #000 !important;
+}
+
+.icon-box {
+    width: 55px;
+    height: 55px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+/* Modal Styling */
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.ls-wide { letter-spacing: 1.5px; }
+
+/* Pastikan tombol close sidebar tidak terpengaruh flexbox header */
+.offcanvas-header .btn-close {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 1060; /* Agar berada di atas elemen lain */
+    margin: 0 !important; /* Menghapus margin otomatis yang mungkin menggeser ke tengah */
+}
+
+/* Tambahan: pastikan header sidebar relatif */
+.offcanvas-header {
+    position: relative;
+}
+
+/* Portfolio Page Styling */
+.portfolio-card {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
+    border-color: #0d6efd;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #212529;
+    transition: 0.3s;
+}
+
+.portfolio-card:hover .card-icon {
+    background: #212529;
+    color: #fff;
+}
+
+.date-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #0d6efd;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.task-list {
+    padding-left: 1rem;
+    line-height: 1.6;
+}
+
+.task-list li {
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 8px;
+}
+
+.task-list li::before {
+    content: "•";
+    color: #0d6efd;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Warna khusus untuk ikon Word jika ingin variasi */
+.fa-file-word {
+    color: #2b579a;
+}
+
+.fa-user-check {
+    color: #e67e22; /* Warna oranye untuk BNSP agar menonjol */
+}
+
+/* Contact Styles */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.contact-info-box:hover .icon-circle {
+    background: #000;
+    color: #fff;
+}
+
+.map-container {
+    filter: grayscale(100%) contrast(1.2) opacity(0.8);
+    transition: 0.5s;
+}
+
+.map-container:hover {
+    filter: grayscale(0%);
+}
+
+.form-control {
+    background: #f8f9fa;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    background: #fff;
+    border-color: #000;
+    box-shadow: none;
+}

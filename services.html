@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Deyrotech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3 px-4 transition-all" id="mainNavbar">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="nav-side-item">
+                <button class="btn border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" id="menu-toggle">
+                    <i class="fas fa-bars-staggered fa-2x"></i>
+                </button>
+            </div>
+            <a class="navbar-brand d-flex align-items-center m-0" href="index.html">
+                <span class="fw-bold me-2 h4 mb-0">Deyrotech</span>
+                <img src="assets/Logo-Web.png" alt="Logo" width="60">
+            </a>
+        </div>
+    </nav>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu">
+    <div class="offcanvas-header d-flex flex-column pt-5 position-relative">
+        <div class="text-center w-100">
+            <img src="assets/Logo-Web.png" alt="Logo" width="80" class="mb-2">
+            <h5 class="fw-bold">Deyrotech</h5>
+        </div>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column justify-content-center">
+        <ul class="nav flex-column text-center">
+            <li class="nav-item">
+                <a class="nav-link py-3" href="index.html"><i class="fas fa-home me-2"></i> Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3" href="about.html"><i class="fas fa-info-circle me-2"></i> About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3" href="services.html"><i class="fas fa-cogs me-2"></i> Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3" href="portofolio.html"><i class="fas fa-award me-2"></i> Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3" href="contact.html"><i class="fas fa-paper-plane me-2"></i> Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <section class="container mt-5 pt-5 mb-5">
+        <div class="text-center mb-5 fade-up">
+            <h6 class="text-primary fw-bold text-uppercase ls-wide">What We Do</h6>
+            <h2 class="display-4 fw-bold">Technology and Research Solutions</h2>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4 fade-up">
+                <div class="service-card p-4 h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#serviceModal" 
+                     data-title="Embedded System Development" 
+                     data-desc="Pengembangan sistem embedded untuk kebutuhan akademik maupun industri kecil, mulai dari perancangan hardware hingga firmware."
+                     data-list="Arduino , ESP (WiFi & IoT), STM32 (basic – intermediate), Raspberry Pi (control & gateway), Sensor & actuator integration, Firmware (C/C++ / MicroPython)">
+                    <div class="icon-box mb-3"><i class="fas fa-microchip fa-2x"></i></div>
+                    <h5 class="fw-bold">Embedded System Development</h5>
+                    <p class="small text-muted">Perancangan hardware dan firmware menggunakan Arduino, ESP32, hingga STM32.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 fade-up">
+                <div class="service-card p-4 h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                     data-title="IoT System & Smart Device"
+                     data-desc="Pembuatan sistem IoT terintegrasi dengan monitoring dan kontrol berbasis web atau mobile."
+                     data-list="Smart monitoring , Dashboard web IoT, MQTT / HTTP API, Cloud IoT (Firebase / Thingspeak / Blynk), Notifikasi WhatsApp / Email, Data logging & visualization">
+                    <div class="icon-box mb-3"><i class="fas fa-wifi fa-2x"></i></div>
+                    <h5 class="fw-bold">IoT System & Smart Device</h5>
+                    <p class="small text-muted">Integrasi perangkat pintar dengan kontrol dashboard cloud dan notifikasi realtime.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 fade-up">
+                <div class="service-card p-4 h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                     data-title="Proyek Akademik & Skripsi"
+                     data-desc="Pendampingan teknis proyek akademik dengan pendekatan edukatif dan orisinal."
+                     data-list="Perancangan alat skripsi, Konsultasi metodologi teknis, Pembuatan prototype alat, Debugging & optimasi sistem, Penjelasan alur kerja sistem, Dokumentasi teknis">
+                    <div class="icon-box mb-3"><i class="fas fa-user-graduate fa-2x"></i></div>
+                    <h5 class="fw-bold">Academic Projects & Thesis</h5>
+                    <p class="small text-muted">Pendampingan teknis prototype alat skripsi dengan dokumentasi yang lengkap.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 fade-up">
+                <div class="service-card p-4 h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                     data-title="Penelitian & Prototype System"
+                     data-desc="Pengembangan prototype sistem untuk kebutuhan penelitian, riset kampus, dan eksperimen teknologi."
+                     data-list="Proof of Concept (PoC), Sistem eksperimen sensor, Data acquisition system, Pengujian & analisis performa, Integrasi hardware–software">
+                    <div class="icon-box mb-3"><i class="fas fa-flask fa-2x"></i></div>
+                    <h5 class="fw-bold">Research & System Prototype</h5>
+                    <p class="small text-muted">Pengembangan alat riset dan Proof of Concept (PoC) untuk eksperimen teknologi.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 fade-up">
+                <div class="service-card p-4 h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                     data-title="Web Dashboard & System Interface"
+                     data-desc="Pembuatan antarmuka web untuk monitoring dan kontrol sistem."
+                     data-list="Dashboard monitoring, Realtime data visualization, UI/UX sederhana & modern, Integrasi API IoT, Hosting & deployment basic">
+                    <div class="icon-box mb-3"><i class="fas fa-desktop fa-2x"></i></div>
+                    <h5 class="fw-bold">Web Dashboard & Interface</h5>
+                    <p class="small text-muted">Antarmuka web modern untuk visualisasi data sensor secara realtime.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 fade-up">
+                <div class="service-card p-4 h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                     data-title="Konsultasi & Troubleshooting"
+                     data-desc="Konsultasi teknis untuk menyelesaikan permasalahan sistem embedded dan IoT."
+                     data-list="Error firmware, Sensor tidak stabil, Komunikasi gagal, Optimasi daya, Review rangkaian & kode">
+                    <div class="icon-box mb-3"><i class="fas fa-tools fa-2x"></i></div>
+                    <h5 class="fw-bold">Technical Consultation & Troubleshooting</h5>
+                    <p class="small text-muted">Solusi perbaikan error firmware, stabilitas sensor, dan optimasi rangkaian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 pt-0">
+                    <div id="modalIcon" class="icon-box mb-3 bg-light"><i class="fas fa-info-circle fa-xl text-primary"></i></div>
+                    <h3 class="fw-bold" id="modalTitle">Service Details</h3>
+                    <p class="text-muted" id="modalDesc"></p>
+                    <hr>
+                    <h6 class="fw-bold mb-3">Scope of Services:</h6>
+                    <ul id="modalList" class="small text-muted ps-3"></ul>
+                    
+                    <div class="d-grid gap-2 mt-4">
+                        <a href="https://wa.me/628995612895" target="_blank" class="btn btn-dark rounded-pill py-3 fw-bold">
+                            <i class="fab fa-whatsapp me-2"></i> Consultation via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script pengisian modal otomatis
+        const serviceModal = document.getElementById('serviceModal');
+        serviceModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const title = button.getAttribute('data-title');
+            const desc = button.getAttribute('data-desc');
+            const listItems = button.getAttribute('data-list').split(',');
+
+            const modalTitle = serviceModal.querySelector('#modalTitle');
+            const modalDesc = serviceModal.querySelector('#modalDesc');
+            const modalList = serviceModal.querySelector('#modalList');
+
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+            
+            modalList.innerHTML = '';
+            listItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'mb-1';
+                li.textContent = item.trim();
+                modalList.appendChild(li);
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('mainNavbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
+    </script>
+</body>
+</html>
